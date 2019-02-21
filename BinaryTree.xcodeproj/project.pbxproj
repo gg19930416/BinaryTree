@@ -15,6 +15,8 @@
 		C688C82B221E8D8500917782 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C688C82A221E8D8500917782 /* main.m */; };
 		C688C835221E8D8500917782 /* BinaryTreeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C688C834221E8D8500917782 /* BinaryTreeTests.m */; };
 		C688C840221E8D8500917782 /* BinaryTreeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C688C83F221E8D8500917782 /* BinaryTreeUITests.m */; };
+		C688C851221E91BF00917782 /* BinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C688C850221E91BF00917782 /* BinaryTreeNode.m */; };
+		C688C854221E92E800917782 /* BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = C688C853221E92E800917782 /* BinaryTree.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		C688C83B221E8D8500917782 /* BinaryTreeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BinaryTreeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C688C83F221E8D8500917782 /* BinaryTreeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTreeUITests.m; sourceTree = "<group>"; };
 		C688C841221E8D8500917782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C688C84F221E91BF00917782 /* BinaryTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTreeNode.h; sourceTree = "<group>"; };
+		C688C850221E91BF00917782 /* BinaryTreeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTreeNode.m; sourceTree = "<group>"; };
+		C688C852221E92E800917782 /* BinaryTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTree.h; sourceTree = "<group>"; };
+		C688C853221E92E800917782 /* BinaryTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTree.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		C688C81A221E8D8300917782 /* BinaryTree */ = {
 			isa = PBXGroup;
 			children = (
+				C688C84D221E910A00917782 /* BinaryTree */,
 				C688C81B221E8D8300917782 /* AppDelegate.h */,
 				C688C81C221E8D8300917782 /* AppDelegate.m */,
 				C688C81E221E8D8300917782 /* ViewController.h */,
@@ -130,6 +137,17 @@
 				C688C841221E8D8500917782 /* Info.plist */,
 			);
 			path = BinaryTreeUITests;
+			sourceTree = "<group>";
+		};
+		C688C84D221E910A00917782 /* BinaryTree */ = {
+			isa = PBXGroup;
+			children = (
+				C688C84F221E91BF00917782 /* BinaryTreeNode.h */,
+				C688C850221E91BF00917782 /* BinaryTreeNode.m */,
+				C688C852221E92E800917782 /* BinaryTree.h */,
+				C688C853221E92E800917782 /* BinaryTree.m */,
+			);
+			path = BinaryTree;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +280,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C688C854221E92E800917782 /* BinaryTree.m in Sources */,
 				C688C820221E8D8300917782 /* ViewController.m in Sources */,
 				C688C82B221E8D8500917782 /* main.m in Sources */,
+				C688C851221E91BF00917782 /* BinaryTreeNode.m in Sources */,
 				C688C81D221E8D8300917782 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

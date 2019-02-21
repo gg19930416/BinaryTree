@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "BinaryTree.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSArray *arr = @[@4,@2,@7,@1,@3,@6,@9];
+    BinaryTreeNode *node = [BinaryTree createTreeWithValues:arr];
+    NSLog(@"node = %@",node);
+    
+    BinaryTreeNode *invertBinaryTree = [BinaryTree invertBinaryTreeWithoutRecursion:node];
+    NSLog(@"invertBinaryTree = %@",invertBinaryTree);
+
     return YES;
 }
 
