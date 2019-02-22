@@ -21,13 +21,48 @@
     
     NSArray *arr = @[@4,@2,@7,@1,@3,@6,@9];
     BinaryTreeNode *node = [BinaryTree createTreeWithValues:arr];
-    NSLog(@"node = %@",node);
     
-    BinaryTreeNode *invertBinaryTree = [BinaryTree invertBinaryTreeWithoutRecursion:node];
-    NSLog(@"invertBinaryTree = %@",invertBinaryTree);
+    [BinaryTree treeFirstInformationWithNode:node resultBlock:^(NSInteger value) {
+        NSLog(@"正序value = %ld",value);
+    }];
+    NSLog(@"\n--------------------------------------------------------------------------------------\n");
 
+    // 反转二叉树
+    BinaryTreeNode *invertBinaryTree = [BinaryTree invertBinaryTreeee:node]; // invertBinaryTreeWithoutRecursion
+    // 先序遍历
+    [BinaryTree treeFirstInformationWithNode:invertBinaryTree resultBlock:^(NSInteger value) {
+        NSLog(@"反序value = %ld",value);
+    }];
+    
+    NSLog(@"\n--------------------------------------------------------------------------------------\n");
+
+    //中序遍历
+    [BinaryTree treeMiddleInformationWithNode:invertBinaryTree resultBlock:^(NSInteger value) {
+        NSLog(@"中序value = %ld",value);
+    }];
+    
+    NSLog(@"\n--------------------------------------------------------------------------------------\n");
+
+    // 后续遍历
+    [BinaryTree treeeLastInformationWithNode:invertBinaryTree resultBolck:^(NSInteger value) {
+        NSLog(@"后序value = %ld",value);
+    }];
+    
+    NSLog(@"\n--------------------------------------------------------------------------------------\n");
+    // 二叉树深度
+    NSLog(@"二叉树深度 = %ld",[BinaryTree depathOfTree:invertBinaryTree]);
+    NSLog(@"\n--------------------------------------------------------------------------------------\n");
+
+    // 二叉树所有节点数
+    NSLog(@"二叉树所有节点数 = %ld",[BinaryTree numberOfNodesInTree:invertBinaryTree]);
+    NSLog(@"\n--------------------------------------------------------------------------------------\n");
+
+    NSLog(@"二叉树中某个节点到根节点的路径 = %@",[BinaryTree pathOfTreeNode:invertBinaryTree inTree:invertBinaryTree]);
     return YES;
 }
+
+
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
